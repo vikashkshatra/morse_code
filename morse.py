@@ -3,7 +3,7 @@
 from typing import Dict
 
 
-codes= morseAlphabet ={
+codes={
         "A" : ".-",
         "B" : "-...",
         "C" : "-.-.",
@@ -34,9 +34,33 @@ codes= morseAlphabet ={
         }
 
 
-a = input("Enter your text here for morse_codes:-\n")
+a = input("Enter your phrase: \n")
 
 
-# read morse code nad compare ites all alphabet
-# and give its code
+
+# convert a string to morse code
+phrase= ""
+for word in a:
+        for i,j in zip(codes.keys(),codes.values()):
+                if word.upper() == i:
+                        phrase= phrase + j
+                        print(i)
+                        print(j)
+                        break
+
+
+print(phrase)
+
+
+# code for reverse morse code search
+
+
+
+
+
+
+
+
+
+
 
